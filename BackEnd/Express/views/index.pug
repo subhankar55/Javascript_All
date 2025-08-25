@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Using Plain HTML in pug</title> -->
+    <title>#{title}</title>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p>
+        <!-- This is a plain html using pug. -->
+        <!-- pipe character : '|' tells pug that this is a plain text , don't consider it as a new tag -->
+        | #{content}
+    </p>
+</body>
+</html>
