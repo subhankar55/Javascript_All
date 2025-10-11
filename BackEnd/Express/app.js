@@ -21,13 +21,13 @@ app.get('/',(req,res)=>{
 
 app.post('/',(req,res)=>{
     console.log(req.body);
-    name = req.body.name;
-    age = req.body.age;
-    gender = req.body.gender;
-    address = req.body.address;
-    more = req.body.yourself;
+    let name = req.body.name;
+    let age = req.body.age;
+    let gender = req.body.gender;
+    let address = req.body.address;
+    let more = req.body.yourself;
     let op = `The name of the client is ${name}.His/Her age is ${age}.Gender is ${gender}.Address: ${address}.He/She is ${more}.`
-    fs.writeFileSync('Oputput.txt',op);
+    fs.writeFileSync('Output.txt',op);
     const params = {'message':'Your form has been submitted successfully.'};
     res.status(200).render('index.pug',params);
 })
